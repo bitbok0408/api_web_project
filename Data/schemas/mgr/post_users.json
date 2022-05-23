@@ -1,0 +1,42 @@
+{
+  "request": {
+    "agentId": "$agentId",
+    "login": "$login",
+    "loginAD": "$ADlogin",
+    "lname": "$lname",
+    "password":"$password",
+    "fname": "$fname",
+    "pname": "$pname",
+    "email": "$email",
+    "phone": "$phone",
+    "fax": "$fax",
+    "enabled": {"default": true, "value": "$enabled"},
+    "deleted": {"default": false, "value": "$deleted"},
+    "roles": [
+      {
+        "roleId": "$roleId"
+      }
+    ],
+    "userGroupRoles": "$userGroupRoles"
+  },
+  "schema": {
+    "userId": {"type": "string"},
+    "agentId": {"allowed": ["$agentId"], "nullable": true},
+    "login": {"allowed": ["$login"]},
+    "loginAD": {"allowed": ["$ADlogin"], "nullable": true},
+    "lname": {"allowed": ["$lname"]},
+    "fname": {"allowed": ["$fname"]},
+    "pname": {"allowed": ["$pname"], "nullable": true},
+    "email": {"allowed": ["$email"], "nullable": true},
+    "phone": {"allowed": ["$phone"], "nullable": true},
+    "fax": {"allowed": ["$fax"], "nullable": true},
+    "dateCreate": {"type":"number"},
+    "enabled": {"allowed": ["$enabled"]},
+    "deleted": {"allowed": ["$deleted"]},
+    "groups": {"type": "list"},
+    "roles": {"type": "list"},
+    "userGroupRoles": {"type":"list"},
+    "domain": {"nullable": true},
+    "imgUrl": {"nullable": true}
+  }
+}

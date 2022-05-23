@@ -1,0 +1,18 @@
+{"request": {
+  "language": "$language",
+  "login": "$login",
+  "modelName": "$modelName",
+  "noisy": true,
+  "password": "$password",
+  "recognitionUrl": "$recognitionUrl"
+},
+"schema": {
+  "speechRecognizerSettingsRid": {"allowed": ["$speechRecognizerSettingsRid"]},
+  "language": {"allowed": ["$language"]},
+  "login": {"allowed": ["$login"]},
+  "modelName": {"allowed": ["$modelName"]},
+  "noisy": {"allowed": [true]},
+  "password": {"allowed": ["$password"]},
+  "recognitionUrl": {"allowed": ["$recognitionUrl"]},
+  "default": {"allowed": [false]}
+}}

@@ -1,0 +1,12 @@
+{
+  "request": {
+    "name": "$name",
+    "parent": {"groupId": "$parentGroupId"}
+  },
+  "schema": {
+    "name": {"allowed": ["$name"]},
+    "groupId": {"type": "string"},
+    "cid": {"type": "number"},
+    "children": {"type": "list"}
+  }
+}

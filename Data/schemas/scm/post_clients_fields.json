@@ -1,0 +1,46 @@
+{
+  "request": {
+    "data_type": {"default": "STRING", "value": "$data_type"},
+    "defaultValue": null,
+    "fieldtype": {"default": "ADDED", "value": "$fieldtype"},
+    "field_name": "$field_name",
+    "fromDictionary": null,
+    "relation_all": null,
+    "inputType": {"default": "EDIT", "value": "$inputType"},
+    "showType": {"default": "MAIN", "value": "$showType"},
+    "isUnique": {"default": 0, "value": "$isUnique"},
+    "useForFilter": {"default": 0, "value": "$useForFilter"},
+    "table_name": "CLIENTS",
+    "title": "$tittle",
+    "fieldSize": {"default": 100, "value": "$fieldSize"},
+    "inputFullSize": {"default": 100, "value": "$inputFullSize"},
+    "required": {"default": 0, "value": "$required"}
+  },
+  "schema": {
+    "id": {"type": "integer"},
+    "history": {"type": "integer"},
+    "defaultValue": {"nullable": true},
+    "data_type": {"allowed": ["$data_type"]},
+    "fieldtype": {"allowed": ["$fieldtype"]},
+    "fieldOrder": {"type": "integer"},
+    "field_name": {"type": "string"},
+    "fromDictionary": {"nullable": true},
+    "relation_all": {"type": "integer","nullable": true},
+    "inputType": {"allowed": ["$inputType"]},
+    "showType": {"allowed": ["$showType"]},
+    "isUnique": {"allowed": ["$isUnique"]},
+    "useForFilter": {"allowed": ["$useForFilter"]},
+    "table_name": {"allowed": ["CLIENTS"]},
+    "title": {"allowed": ["$tittle"]},
+    "fieldSize": {"allowed": ["$fieldSize"], "nullable": true},
+    "inputFullSize": {"allowed": ["$inputFullSize"]},
+    "joinedTable": {"nullable": true},
+    "relation_field": {"nullable": true},
+    "required": {"type": "integer"},
+    "useInGroupBy": {"allowed": [false]}
+
+  }
+}
+
+
+

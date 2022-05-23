@@ -1,0 +1,61 @@
+{
+  "request": {
+    "pagination": {
+      "pageNumber": {"default": 1,"value": "$pageNumber"},
+      "pageSize": {"default": 9999,"value": "$pageSize"}
+    },
+    "sorting": {
+      "sortedColumn": {"default": "dateStart","value": "$sortedColumn"},
+      "order": {"default": "DESC","value": "$order"}
+    },
+    "filter": {
+      "criteriaList": [
+        {
+          "name": "$criteria_name",
+          "operator": {"default": "equal","value": "$criteria_operator"},
+          "values": "$criteria_values"
+        },
+        {
+          "name": "callDateFrom",
+          "operator": "equal",
+          "values": "$callDateFrom"
+        },
+        {
+          "name": "callDateTo",
+          "operator": "equal",
+          "values": "$callDateTo"
+        }
+      ]
+    }
+  },
+
+
+  "schema": {
+    "data": {"type": "list"},
+    "pagination": {
+      "type": "dict",
+      "schema": {
+        "rowCount": {"type": "number"},
+        "pageNumber": {"allowed": ["$pageNumber"]},
+        "pageSize": {"allowed": ["$pageSize"]}
+    }},
+    "filter": {"type": "dict", "schema": {
+      "criteriaList":
+        {"type": "list", "schema": {
+            "type": "dict",
+            "schema": {
+              "name": {"allowed": ["$criteria_name", "callDateFrom", "callDateTo"]},
+              "operator": {"allowed": ["$criteria_operator", "equal"]},
+              "values": {"allowed": ["$criteria_values", "$callDateFrom", "$callDateTo"]}
+            }
+            }
+          }}
+        },
+        "sorting":
+          {"type": "dict", "schema": {
+            "sortedColumn": {"allowed": ["$sortedColumn"]},
+            "order": {"allowed": ["$order"]}
+          }}
+        }
+      }
+

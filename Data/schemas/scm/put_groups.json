@@ -1,0 +1,14 @@
+{"request": {
+  "rid": "$rid",
+  "comment": "$comment",
+  "name": "$name",
+  "useForSCM": {"default": false, "value": "$useForSCM"}
+},
+"schema": {
+  "rid": {"allowed": ["$rid"]},
+  "comment": {"allowed": ["$comment"], "nullable": true},
+  "name": {"allowed": ["$name"]},
+  "tablePrefix": {"type": "integer"},
+  "useForSCM": {"allowed": ["$useForSCM"]}
+}
+}

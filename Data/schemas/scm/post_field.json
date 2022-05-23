@@ -1,0 +1,23 @@
+{
+  "request": {
+    "cmGroup": {
+      "cmGroupRid": "$cmGroupRid"
+    },
+    "data_type": "$data_type",
+    "fieldtype": "$fieldtype",
+    "field_name": "$field_name",
+    "fromDictionary": "$fromDictionary",
+    "relation_all": "$relation_all",
+    "defaultValue": "$defaultValue",
+    "inputType": "$inputType",
+    "showType": "$showType",
+    "isUnique": "$isUnique",
+    "useForFilter": "$useForFilter",
+    "table_name": "$table_name",
+    "title": "$title",
+    "fieldSize": "fieldSize",
+    "inputFullSize": "inputFullSize",
+    "useInGroupBy": "useInGroupBy"
+  },
+  "schema": ""
+}

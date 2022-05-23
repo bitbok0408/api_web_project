@@ -1,0 +1,51 @@
+{
+  "request": {},
+  "schema": {
+    "crmCallId": {"type": "string", "nullable": true},
+    "dateStart": {"type": "integer"},
+    "dateFinish": {"type": "integer"},
+    "direction": {"allowed":  ["DIRECTION_UNKNOWN", "DIRECTION_IN", "DIRECTION_OUT"]},
+    "contentType": {"allowed":  ["AUDIO", "CHAT", "VIDEO"]},
+    "duration": {"type": "integer"},
+    "recognizeState": {"allowed": ["RECOGNIZED", "RE_RECOGNIZE", "NOT_RECOGNIZED", "ERROR"]},
+    "commented": {"type": "boolean"},
+    "licensed": {"allowed":  [0,1]},
+    "finishState": {"allowed":  ["STARTED", "CONVERTED", "CONVERTING_CORRUPTED", "ENDED", "CLEANED", "UNDEFINED", "RECOVERED"]},
+    "mapped": {"type": "boolean"},
+    "tags": {"type": "list"},
+    "participants":{"type": "list", "schema":{"type": "dict", "schema":  {
+        "phone": {"type": "string"},
+        "duration": {"type": "integer"},
+        "codec": {"allowed":  ["WAVE_FORMAT_ALAW/8000", "WAVE_FORMAT_MULAW/8000"]},
+        "finishState": {"allowed":  ["STARTED", "CONVERTED", "CONVERTING_CORRUPTED", "ENDED", "CLEANED", "UNDEFINED", "RECOVERED"]},
+        "participantType": {"allowed":  ["AGENT", "CLIENT"]},
+        "user": {"type":  "dict", "nullable": true},
+        "messengerType": {"type": "string", "nullable": true},
+        "callParticipantId": {"type": "string"},
+        "joinTalkingDate": {"type": "integer"}
+      }}},
+    "parts": {"type": "list", "schema":{"type": "dict", "schema": {
+        "partId": {"type": "integer"},
+        "finishState": {"allowed":  ["STARTED", "CONVERTED", "CONVERTING_CORRUPTED", "ENDED", "CLEANED", "UNDEFINED", "RECOVERED"]},
+        "startTime": {"type": "integer"},
+        "duration": {"type": "integer"},
+        "participants": {"type": "list"},
+        "callPartId": {"type": "string"}
+      }
+    }},
+    "callParticipantType": {"allowed":  ["INNER", "OUTER"]},
+    "callStatistic": {"type": "dict", "schema":
+    {"holdsCount": {"type": "integer"},
+      "holdsDuration": {"type": "integer"},
+      "partsCount": {"type": "integer"},
+      "agentMessCount": {"type": "integer"},
+      "customerMessCount": {"type": "integer"},
+      "recognizeLanguageCode": {"type": "string", "nullable": true},
+      "recognizeConfidence": {"type": "integer", "min": 0, "max": 100, "nullable": true }
+    }},
+    "keywords": {"type": "list"},
+    "comments": {"type": "list"},
+    "callId": {"type": "string"},
+    "isMarked": {"type": "boolean"}
+  }
+}

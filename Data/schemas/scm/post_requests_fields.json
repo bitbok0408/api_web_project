@@ -1,0 +1,32 @@
+{
+  "request": {
+    "data_type": {"default": "STRING", "value": "$data_type"},
+    "fieldtype": "ADDED",
+    "field_name": "$field_name",
+    "fromDictionary": null,
+    "relation_all": null,
+    "inputType": {"default": "EDIT", "value": "$inputType"},
+    "showType": {"default": "MAIN", "value": "$showType"},
+    "isUnique": {"default": 0, "value": "$isUnique"},
+    "useForFilter": {"default": 0, "value": "$useForFilter"},
+    "table_name": "REQUESTS",
+    "title": "$tittle",
+    "fieldSize": {"default": 100, "value": "$fieldSize"},
+    "inputFullSize": {"default": 100, "value": "$inputFullSize"}
+  },
+  "schema": {
+    "data_type": {"allowed": ["$data_type"]},
+    "fieldtype": {"allowed": ["$fieldtype"]},
+    "field_name": {"allowed": ["$field_name"]},
+    "fromDictionary": {"nullable": true},
+    "relation_all": {"nullable": true},
+    "inputType": {"allowed": ["$inputType"]},
+    "showType": {"allowed": ["$showType"]},
+    "isUnique": {"allowed": ["$isUnique"]},
+    "useForFilter": {"allowed": ["$useForFilter"]},
+    "table_name": {"allowed": ["REQUESTS"]},
+    "title": {"allowed": ["$tittle"]},
+    "fieldSize": {"allowed": ["$fieldSize"]},
+    "inputFullSize": {"allowed": ["$inputFullSize"]}
+  }
+}

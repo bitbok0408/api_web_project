@@ -1,0 +1,34 @@
+{
+  "request": {
+    "pagination": {
+      "pageNumber": {"default": 1,"value": "$pageNumber"},
+      "pageSize": {"default": 100,"value": "$pageSize"}
+    },
+    "sorting": {
+      "sortedColumn": {"default": "name","value": "$sortedColumn"},
+      "order": {"default": "ASC","value": "$order"}
+    },
+    "filter": {
+      "criteriaList": []
+    }
+  },
+
+
+  "schema": {
+    "data": {"type": "list"},
+    "pagination": {
+      "type": "dict",
+      "schema": {
+        "rowCount": {"type": "number"},
+        "pageNumber": {"allowed": ["$pageNumber"]},
+        "pageSize": {"allowed": ["$pageSize"]}
+    }},
+    "filter": {"type": "dict", "schema": {
+      "criteriaList":
+        {"type": "list"}
+          }}
+        ,
+        "sorting":{"type": "dict", "schema": {
+            "sortedColumn": {"allowed": ["$sortedColumn"]},
+            "order": {"allowed": ["$order"]}
+          }}}}

@@ -1,0 +1,11 @@
+{"request": {
+  "callRids": [
+    "$callRid"
+  ],
+  "speechRecognizerSettingsRid": "$speechRecognizerSettingsRid"
+},
+  "schema":{
+  "body": {"type": "dict",
+  "statusCode": {"type": "string"},
+  "statusCodeValue": {"type": "integer"}
+}}}

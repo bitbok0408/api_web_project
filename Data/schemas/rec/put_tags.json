@@ -1,0 +1,12 @@
+{
+  "request": {
+    "tagId": "$tagId",
+    "name": "$name",
+    "description": "$description"
+  },
+  "schema": {
+    "tagId": {"allowed": ["$tagId"]},
+    "name": {"allowed": ["$name"]},
+    "description": {"allowed": ["$description"]}
+  }
+}

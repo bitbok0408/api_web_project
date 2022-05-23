@@ -1,0 +1,27 @@
+{
+  "request": {
+    "name": "$name",
+    "system": false,
+    "templateRole": "$templateRole",
+    "sessionLiveTimeSec": 300,
+    "group": {"groupId": "$groupId"}
+  },
+
+  "schema": {
+    "name": {"allowed": ["$name"]},
+    "sessionLiveTimeSec": {"allowed": [300]},
+    "group":
+        {"type": "dict",
+          "schema": {
+                "name": {"type": "string"},
+                "cid": {"type": "integer"},
+                "groupId": {"allowed": ["$groupId"]}
+            }
+        },
+    "templateRole": {"allowed": ["$templateRole"], "nullable": true},
+    "system": {"allowed": [false]},
+    "roleId": {"type": "string"}}
+}
+
+
+

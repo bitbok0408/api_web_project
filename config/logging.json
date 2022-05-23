@@ -1,0 +1,64 @@
+{
+    "version": 1,
+    "disable_existing_loggers": false,
+    "formatters": {
+        "simple": {
+            "format": "[%(asctime)s] - %(levelname)- -10s %(message)s"
+        },
+        "complex": {
+            "format": "[%(asctime)s] - %(name)s - %(levelname)- -10s %(module)s : %(funcName)s : %(lineno)d - %(message)s"
+        }
+    },
+
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "level": "DEBUG",
+            "formatter": "simple",
+            "stream": "ext://sys.stdout"
+        },
+
+        "project_info_file_handler": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "level": "INFO",
+            "formatter": "complex",
+            "filename": "project-info.log",
+            "maxBytes": 10485760,
+            "backupCount": 20,
+            "encoding": "utf8"
+        },
+
+        "project_error_file_handler": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "level": "ERROR",
+            "formatter": "complex",
+            "filename": "project-errors.log",
+            "maxBytes": 10485760,
+            "backupCount": 20,
+            "encoding": "utf8"
+        },
+
+        "project_general_file_handler": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "level": "DEBUG",
+            "formatter": "complex",
+            "filename": "project-general.log",
+            "maxBytes": 31457280,
+            "backupCount": 20,
+            "encoding": "utf8"
+        }
+    },
+
+    "loggers": {
+        "bitbok": {
+            "level": "INFO",
+            "handlers": ["console", "project_info_file_handler", "project_error_file_handler", "project_general_file_handler"],
+            "propagate": false
+        }
+    },
+
+    "root": {
+        "level": "INFO",
+        "handlers": ["console", "project_info_file_handler", "project_error_file_handler", "project_general_file_handler"]
+    }
+}

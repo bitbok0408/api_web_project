@@ -1,0 +1,11 @@
+{
+  "request": {
+    "tagId": "$tagId",
+    "callId": "$callId"
+  },
+  "schema": {
+    "tagId": {"allowed": ["$tagId"]},
+    "callId": {"allowed": ["$callId"]},
+    "requestDate": {"type": "number"}
+  }
+}

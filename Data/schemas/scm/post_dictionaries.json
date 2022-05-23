@@ -1,0 +1,24 @@
+{
+  "request": {
+    "code": "$code",
+    "text": "$value",
+    "url": "$url",
+    "info": "$info",
+    "order": {"default": 0, "value": "$order"},
+    "name": "$dict_name",
+    "parentId": {"default": 0, "value": "$parentId"},
+    "lvl": {"default": 0, "value": "$lvl"}
+  },
+  "schema": {
+    "id": {"type": "integer"},
+    "countChild": {"type": "integer", "nullable": true},
+    "code": {"allowed": ["$code"]},
+    "text": {"allowed": ["$value"]},
+    "url": {"allowed": ["$url"], "nullable": true},
+    "info": {"allowed": ["$info"]},
+    "order": {"allowed": ["$order"]},
+    "name": {"allowed": ["$dict_name"]},
+    "parentId": {"allowed": ["$parentId"]},
+    "lvl": {"allowed": ["$lvl"]}
+  }
+}

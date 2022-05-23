@@ -1,0 +1,10 @@
+{"request": {},
+"schema": {
+  "badFrom": {"type": "integer", "min": 0, "max": 100},
+  "badTo": {"type": "integer", "min": 0, "max": 100},
+  "confidenceSettingsRid": {"type": "string"},
+  "excellentFrom": {"type": "integer", "min": 0, "max": 100},
+  "excellentTo": {"type": "integer", "min": 0, "max": 100},
+  "goodFrom": {"type": "integer", "min": 0, "max": 100},
+  "goodTo": {"type": "integer", "min": 0, "max": 100}
+}}

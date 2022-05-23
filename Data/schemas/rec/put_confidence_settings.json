@@ -1,0 +1,13 @@
+{"request": {
+  "badMaxValue": "$badMaxValue",
+  "goodMaxValue": "$goodMaxValue"
+},
+"schema": {
+  "badFrom": {"allowed": [0]},
+  "badTo": {"allowed": ["$badMaxValue"]},
+  "confidenceSettingsRid": {"type": "string"},
+  "excellentFrom": {"min": "$goodMaxValue", "max": 100},
+  "excellentTo": {"allowed": [100]},
+  "goodFrom": {"min": "$badMaxValue", "max": "$goodMaxValue"},
+  "goodTo": {"allowed": ["$goodMaxValue"]}
+}}
